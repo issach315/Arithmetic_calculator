@@ -69,6 +69,15 @@ table{
             <td align="center"><button  class="b" onclick="cal()">=</button></td>
             
         </tr>
+
+        <tr>
+            
+            <td align="center"><button class="b" onclick="show('00')">00</button></td>
+            <td align="center"><button class="b" onclick="show('%')">%</button></td>
+            <td align="center"><button class="b" onclick="show('^')">^</button></td>
+            <td align="center"> <button class="b" value="DE" onclick="del()">Del</button></td>
+        </tr>
+      
     </table>
 
 
@@ -86,6 +95,10 @@ table{
         {
             var output= eval(document.getElementById("result").value);
             document.getElementById("result").value=output;
+        }
+        function del()
+        {
+            result.value = result.value.slice(0,-1);
         }
     </script>
     
